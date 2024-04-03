@@ -42,7 +42,11 @@ export default function ActionCards() {
                 'https://kazzcode.hashnode.dev/how-to-install-react-native-on-linux-ubuntu-2204',
               )
             }>
-            <Text>Read More</Text>
+            <Text style={styles.socialLinks}>Read More</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => openWebsite('https://github.com/m-kazi')}>
+            <Text style={styles.socialLinks}>Follow Me</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -51,14 +55,50 @@ export default function ActionCards() {
 }
 
 const styles = StyleSheet.create({
-  headingText: {},
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {
-    height: 100,
+  headingText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    paddingHorizontal: 10,
+    textAlign: 'center',
   },
-  bodyContainer: {},
-  footerContainer: {},
+  card: {
+    width: 340,
+    height: 300,
+    marginVertical: 15,
+    marginHorizontal: 10,
+    padding: 2,
+    borderRadius: 5,
+  },
+  elevatedCard: {
+    backgroundColor: '#E07C24',
+    elevation: 5,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
+  headingContainer: {},
+  headerText: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  cardImage: {
+    height: 150,
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  bodyContainer: {
+    marginBottom: 10,
+  },
+  footerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  socialLinks: {
+    textDecorationLine: 'underline',
+    fontWeight: 'bold',
+    backgroundColor: '#FFF',
+    padding: 10,
+    borderRadius: 20,
+  },
 });
