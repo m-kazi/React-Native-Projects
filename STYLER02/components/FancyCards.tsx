@@ -61,8 +61,18 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     paddingHorizontal: 10,
   },
-  cardTitle: {},
-  cardLabel: {},
-  cardDescription: {},
+  cardTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 2,
+  },
+  cardLabel: {
+    fontSize: 15,
+    marginBottom: 5,
+  },
+  cardDescription: {
+    fontSize: 12,
+    marginBottom: 5,
+  },
   cardFooter: {},
 });
