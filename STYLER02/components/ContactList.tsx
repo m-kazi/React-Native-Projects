@@ -35,20 +35,22 @@ export default function ContactList() {
 
   return (
     <View>
-      <Text style={styles.headingText}>ContactList</Text>
+      <Text style={styles.headingText}>Contact List</Text>
       <ScrollView style={styles.container} scrollEnabled={false}>
         {/* looping through the contacts object */}
         {contacts.map(({uid, name, designation, imageUrl}) => (
           // using 'uid' as a unique id to not look into the same opbject
           <View key={uid} style={styles.userCard}>
-            <Text style={styles.userName}>{name}</Text>
-            <Text style={styles.userDesignation}>{designation}</Text>
             <Image
               source={{
                 uri: imageUrl,
               }}
               style={styles.userImage}
             />
+            <View>
+              <Text style={styles.userName}>{name}</Text>
+              <Text style={styles.userDesignation}>{designation}</Text>
+            </View>
           </View>
         ))}
       </ScrollView>
@@ -57,14 +59,35 @@ export default function ContactList() {
 }
 
 const styles = StyleSheet.create({
-  headingText: {},
-  container: {},
-  userCard: {},
+  headingText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    paddingHorizontal: 10,
+    textAlign: 'center',
+  },
+  container: {
+    paddingHorizontal: 10,
+  },
+  userCard: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 3,
+    borderRadius: 10,
+    padding: 5,
+    backgroundColor: '#A87CA0',
+  },
   userImage: {
     width: 60,
     height: 60,
-    borderRadius: 5,
+    borderRadius: 50,
+    marginRight: 15,
   },
-  userName: {},
-  userDesignation: {},
+  userName: {
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  userDesignation: {
+    fontSize: 12,
+  },
 });
