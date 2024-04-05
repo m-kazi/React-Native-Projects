@@ -37,7 +37,6 @@ export default function ContactList() {
     <View>
       <Text style={styles.headingText}>Contact List</Text>
       <ScrollView style={styles.container} scrollEnabled={false}>
-        {/* looping through the contacts object */}
         {contacts.map(({uid, name, designation, imageUrl}) => (
           // using 'uid' as a unique id to not look into the same opbject
           <View key={uid} style={styles.userCard}>
