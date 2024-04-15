@@ -23,12 +23,16 @@ function App(): React.JSX.Element {
   return (
     <>
       <StatusBar backgroundColor={randomBackground} />
-      <View style={[styles.container, {backgroundColor: randomBackground}]}>
+      <View style={[styles.container]}>
+        <View style={[styles.circle, {backgroundColor: randomBackground}]} />
+
         <TouchableOpacity onPress={generateColor}>
           <View style={styles.actionBtn}>
             <Text style={styles.actionBtnTxt}>Press</Text>
           </View>
         </TouchableOpacity>
+
+        <View style={[styles.square, {backgroundColor: randomBackground}]} />
       </View>
     </>
   );
@@ -51,6 +55,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#FFF',
     textTransform: 'uppercase',
+  },
+  square: {
+    height: 100,
+    width: 100,
+    marginTop: 50,
+  },
+  circle: {
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+    marginBottom: 50,
   },
 });
 
