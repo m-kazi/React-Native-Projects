@@ -7,15 +7,7 @@
 
 import React from 'react';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 function App(): React.JSX.Element {
   return (
@@ -26,21 +18,29 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFF2F2',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  diceContainer: {
+    margin: 12,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  diceImage: {
+    width: 200,
+    height: 200,
   },
-  highlight: {
+  rollDiceBtnText: {
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    borderWidth: 2,
+    borderRadius: 8,
+    borderColor: '#E5E0FF',
+    fontSize: 16,
+    color: '#8EA7E9',
     fontWeight: '700',
+    textTransform: 'uppercase',
   },
 });
 
